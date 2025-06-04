@@ -2,7 +2,7 @@ name: Test with Coverage
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
