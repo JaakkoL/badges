@@ -38,14 +38,14 @@ jobs:
         run: uv run coverage-badge -f -q -o coverage.svg
         shell: bash
 
-      - name: Commit badge to badges branch
+      - name: Generate badge and commit branch
+        shell: bash
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
           git checkout --orphan badges
           git reset --hard
-          cp coverage.svg .
           git add coverage.svg
           git commit -m "Update coverage badge"
           git push --force origin badges:badges
