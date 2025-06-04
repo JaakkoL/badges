@@ -35,5 +35,5 @@ jobs:
         shell: bash
 
       - name: Generate coverage badge
-        run: uv run coverage-badge -f -o -q coverage.svg
+        run: uv run coverage-badge -f -q -o coverage.svg
         shell: bash
