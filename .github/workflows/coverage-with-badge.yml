@@ -3,6 +3,7 @@ name: Test with Coverage
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -31,4 +32,8 @@ jobs:
 
       - name: Run tests with coverage
         run: uv run pytest --cov
+        shell: bash
+
+      - name: Generate coverage badge
+        run: uv run coverage-badge -f -o -q coverage.svg
         shell: bash

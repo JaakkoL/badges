@@ -5,6 +5,7 @@ description = "Playing with code coverage badges in Python"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "coverage-badge>=1.1.2",
     "pytest>=8.4.0",
     "pytest-cov>=6.1.1",
 ]
